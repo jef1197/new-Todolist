@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bulma.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="columns mb-0">
+            <section class="column is-3 p-5 has-background-info task-list-section">
+                <div class="columns is-multiline mt-6 p-6">
+                    <h2 class="title column is-full p-0 has-text-white">To Do List</h2>
+                    <!-- <h2 class="title column is-full p-0 has-text-white">Today</h2> -->
+                </div>
+                <div class="content-task-List columns is-multiline pl-6 pr-6" id="taskListContainer">
+                    <div class="column p-0 is-flex is-justify-content-space-between">
+                        <h2 class="title has-text-white">Projects</h2>
+                        <a class=" js-modal-trigger"  data-target="taskListForm"> <img width="35px" src="add.png"/> </a>
+                    </div>
+                </div>
+            </section>
+            <section class="column p-5 task-section">
+                <div class="columns is-desktop  mt-5 ml-5 mr-5 pl-6 pr-6 pt-6">
+                    <h1 class="title is-1 has-text-link column is-10" id="taskTitle">Today </h1>
+                    <!-- <h1 class="title ">Due Date </h1> -->
+                    <a class="button is-info is-inverted js-modal-trigger" data-target="taskForm"> Add Task</a>
+                </div>
+                <div class="content-task pl-6 pr-6 ml-5 mr-5" id="taskContainer">
+                </div>
+            </section>
+
+            <div id="taskForm" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <section class="modal-card-body content mb-0">
+                        <div class="field">
+                            <label class="label" for="taskName">Task</label>
+                            <div class="control">
+                                <input class="input" id="taskName" type="text" placeholder="Enter Task"/>
+                            </div>
+                        </div>  
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-success" id="addTaskBtn" >Add Task</button>
+                        <button class="button">Cancel</button>
+                    </footer>
+                </div>
+            </div>
+
+            <div id="taskListForm" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <section class="modal-card-body content mb-0">
+                        <div class="field">
+                            <label class="label" for="taskListName">Project</label>
+                            <div class="control">
+                                <input class="input" id="taskListName" type="text" placeholder="Enter Project"/>
+                            </div>
+                        </div>  
+    
+                    </section>
+    
+                    <footer class="modal-card-foot">
+                        <button class="button is-success" id="addTaskList">Add Project</button>
+                        <button class="button">Cancel</button>
+                    </footer>
+                </div>
+            </div>
+        </main>
+        <footer class="has-background-info-dark">
+            <h2>Designed & Developed by Jef Ogues</h2>
+        </footer>
+        
+        <script src="main.js"></script>
+    </body>
+</html>
