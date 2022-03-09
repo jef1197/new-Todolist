@@ -15,25 +15,36 @@
     </head>
     <body>
         <main class="columns mb-0">
-            <section class="column is-3 p-5 has-background-info task-list-section">
-                <div class="columns is-multiline mt-6 p-6">
-                    <h2 class="title column is-full p-0 has-text-white">To Do List</h2>
-                    <!-- <h2 class="title column is-full p-0 has-text-white">Today</h2> -->
-                </div>
-                <div class="content-task-List columns is-multiline pl-6 pr-6" id="taskListContainer">
-                    <div class="column p-0 is-flex is-justify-content-space-between">
-                        <h2 class="title has-text-white">Projects</h2>
-                        <a class=" js-modal-trigger"  data-target="taskListForm"> <img width="35px" src="add.png"/> </a>
+
+            <div class="hamburger-menu mobileNav">
+                <input  id="menu__toggle" type="checkbox" checked />
+                <label class="menu__btn is-hidden-desktop" for="menu__toggle">
+                <span></span>
+                </label>
+                <ul class="menu__box" id="taskListContainer">
+                    <div class="columns is-multiline p-6">
+                        <h2 class="title column is-full p-0 has-text-white">To Do List</h2>
+                        <!-- <h2 class="title column is-full p-0 has-text-white">Today</h2> -->
                     </div>
-                </div>
-            </section>
-            <section class="column p-5 task-section">
-                <div class="columns is-desktop  mt-5 ml-5 mr-5 pl-6 pr-6 pt-6">
+                    <div class="content-task-List columns is-multiline pl-6 pr-6" >
+                        <div class="column p-0 is-flex is-justify-content-space-between">
+
+                            <h2 class="title has-text-white">Projects</h2>
+                            <a class=" js-modal-trigger"  data-target="taskListForm"> <img width="35px" src="add.png"/> </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <section class="column p-5 is-offset-3 task-section">
+                <div class="columns is-desktop  mt-5 pt-6">
                     <h1 class="title is-1 has-text-link column is-10" id="taskTitle">Today </h1>
                     <!-- <h1 class="title ">Due Date </h1> -->
-                    <a class="button is-info is-inverted js-modal-trigger" data-target="taskForm"> Add Task</a>
+                    <a class="button is-info is-inverted js-modal-trigger ml-3" data-target="taskForm"> Add Task</a>
+                    <!-- <a class="button is-info is-inverted js-modal-trigger" data-target="taskListEdit"> edit</a> -->
                 </div>
-                <div class="content-task pl-6 pr-6 ml-5 mr-5" id="taskContainer">
+                <div class="content-task ml-5 mr-5" id="taskContainer">
+
                 </div>
             </section>
 
@@ -74,11 +85,33 @@
                     </footer>
                 </div>
             </div>
+
+            <div id="taskListEdit" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <section class="modal-card-body content mb-0">
+                        <div class="field">
+                            <label class="label" for="taskListEditName">Edit</label>
+                            <div class="control">
+                                <input class="input" id="taskListEditName" type="text" placeholder="Enter Task"/>
+                            </div>
+                        </div>  
+    
+                    </section>
+    
+                    <footer class="modal-card-foot">
+                        <button class="button is-success" id="editTask">Edit Task</button>
+                        <button class="button">Cancel</button>
+                    </footer>
+                </div>
+            </div>
+
         </main>
         <footer class="has-background-info-dark">
             <h2>Designed & Developed by Jef Ogues</h2>
         </footer>
         
-        <script src="main.js"></script>
+        <!-- <script src="main.js"></script> -->
+        <script src="/src/index.js"></script>
     </body>
 </html>
